@@ -8,7 +8,7 @@ const ExpanseHistory = ({ expenses }) => {
         {expenses.map((expense, index) => (
             <div className='expenses'>
           <li key={index}>
-            {expense.expense} - ₹{expense.amount}
+            <h3> {expense.expense}  - ₹{expense.amount} </h3>
           </li>
           </div>
         ))}

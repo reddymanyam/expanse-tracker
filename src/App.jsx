@@ -12,13 +12,14 @@ const App = () => {
     setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
   };
 
+  const totalAmount = expenses.reduce((acc, expense) => acc + expense.amount, 0);
 
   return (
     <>
        
       <div className='container'>
       <h1>Total Amount</h1>
-      <h2>₹</h2>
+      <h2>₹ {totalAmount}</h2>
       <div className='container1'>
       <div className='container11'>
         <AddExpanses handleAddExpense={handleAddExpense} />
