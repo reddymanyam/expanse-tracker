@@ -11,6 +11,11 @@ const App = () => {
   const handleAddExpense = (newExpense) => {
     setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
   };
+  
+  const handleDeleteExpense = (id) =>{
+    const updatedExpenses = expenses.filter((expense) =>(expense.id !== id));
+      setExpenses( updatedExpenses);
+  }
 
   const totalAmount = expenses.reduce((acc, expense) => acc + expense.amount, 0);
 
@@ -25,7 +30,7 @@ const App = () => {
         <AddExpanses handleAddExpense={handleAddExpense} />
       </div>
       <div className='container12'>
-      <ExpanseHistory expenses={expenses} />
+      <ExpanseHistory expenses={expenses} handleDeleteExpense={handleDeleteExpense} />
       </div>
       </div>
       

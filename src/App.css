@@ -47,3 +47,28 @@ h3{
   padding: 5px;
   margin-left: 15px;
 }
+.expenses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 30px,10px ;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.expenses li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color:#ccc
+}
+
+
+.expenses Button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+}
